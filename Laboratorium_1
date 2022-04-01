@@ -1,0 +1,548 @@
+import java.io.*;
+
+class ExampleInputOutput {
+  public static void main(String[] args) throws IOException {
+    System.out.println("Witaj w świecie Java!!!");
+  }
+}
+-------------------------------------------------------------
+import java.io.*;
+
+class ExampleInputOutput {
+  public static void main(String[] args) throws IOException {
+    double a;
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    System.out.print("Podaj liczbe: ");
+    a = Double.parseDouble(br.readLine());
+    System.out.println("Podałeś: " + a);
+  }
+}
+-------------------------------------------------------------
+import java.io.*;
+import java.util.*;
+
+class ExampleInputOutput {
+  public static void main(String[] args) throws IOException {
+    String a;
+    int b;
+    Scanner in = new Scanner(System.in);
+    a = in.nextLine();
+    b = in.nextInt();
+    System.out.println("Podałeś jako zmienną a: " + a);
+    System.out.printf("Podałeś jako zmienną b: %d",b);
+  }
+}
+-------------------------------------------------------------
+import java.io.*;
+import java.util.*;
+
+class ExampleInputOutput {
+    public static void main(String[] args) throws IOException {
+        int a,b,wynikDodawania,wynikOdejmowania,wynikDzieleniaModulo,wynikMnozenia;
+        Scanner in = new Scanner(System.in);
+        a=in.nextInt();
+        b=in.nextInt();
+
+        wynikDodawania = a+b;
+        wynikOdejmowania = a-b;
+        wynikMnozenia = a*b;
+        wynikDzieleniaModulo = a % b;
+
+        System.out.printf("Dodawanie: %d + %d = %d\n", a,b,wynikDodawania);
+        System.out.printf("Odejmowanie: %d - %d = %d\n",a,b,wynikOdejmowania);
+        System.out.printf("Mnożenie: %d * %d = %d\n",a,b,wynikMnozenia);
+        System.out.printf("Dzielenie modulo: %d mod %d = %d\n",a,b,wynikDzieleniaModulo);
+    }
+}
+-------------------------------------------------------------
+import java.io.*;
+import java.util.*;
+
+class ExampleInputOutput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String first = scanner.next();
+        String second = scanner.next();
+        System.out.print("\"%" + second + " " + first + "%\"");
+    }
+}
+-------------------------------------------------------------
+import java.util.*;
+import java.io.*;
+
+
+ class Trojkat {
+
+    public static void main(String[] args) throws IOException
+    {
+        int a,b,c;
+        Scanner scan = new Scanner(System.in);
+
+        a = scan.nextInt();
+        b = scan.nextInt();
+        c = scan.nextInt();
+
+        if((a+b>c)&(a+c>b)&(b+c>a))
+        {
+            System.out.printf("Tak");
+        }
+        else
+        {
+            System.out.printf("BŁĄD");
+        }
+
+
+    }
+}
+-------------------------------------------------------------
+import java.util.Scanner;
+import java.util.*;
+import java.io.*;
+
+class ROK {
+    public static void main(String[] args) {
+    int rok =1;
+    Scanner a = new Scanner(System.in);
+    rok = a.nextInt();
+    switch (rok)
+    {
+        case 1:
+            System.out.printf("Styczeń: 31 dni");
+            break;
+        case 2:
+            System.out.printf("Luty: 28 dni");
+            break;
+        case 3:
+            System.out.printf("Marzec: 31 dni");
+            break;
+        case 4:
+            System.out.printf("Kwiecień: 30 dni");
+            break;
+        case 5:
+            System.out.printf("Maj: 31 dni");
+            break;
+        case 6:
+            System.out.printf("Czerwiec: 30 dni");
+            break;
+        case 7:
+            System.out.print("Lipiec: 31 dni");
+            break;
+        case 8:
+            System.out.print("Sierpień: 31 dni");
+            break;
+        case 9:
+            System.out.print("Wrzesień: 30 dni");
+            break;
+        case 10:
+            System.out.print("Październik: 31 dni");
+            break;
+        case 11:
+            System.out.print("Listopad: 30 dni");
+            break;
+        case 12:
+            System.out.print("Grudzień: 31 dni");
+            break;
+        default:
+            System.out.print("BŁĄD");
+            break;
+    }
+    }
+}
+-------------------------------------------------------------
+import java.util.*;
+import java.io.*;
+
+
+ class Main {
+
+    public static void main(String[] args) throws IOException
+    {
+        double a,b,c;
+        Scanner scan = new Scanner(System.in);
+
+        a = scan.nextDouble();
+        b = scan.nextDouble();
+        c = scan.nextDouble();
+
+        if((b<a)&(c<a)) //OStatnie A
+        {
+            if(b>c)
+            {
+                System.out.printf("%.6f %.6f %.6f", c,b,a);
+            }
+            else
+            {
+                System.out.printf("%.6f %.6f %.6f", b,c,a);
+            }
+        }
+        if((a<b)&(c<b)) //OStatnie B
+        {
+            if(a>c)
+            {
+                System.out.printf("%.6f %.6f %.6f", c,a,b);
+            }
+            else
+            {
+                System.out.printf("%.6f %.6f %.6f", a,c,b);
+            }
+        }
+        if((a<c)&(b<c)) //Ostatnie C
+        {
+            if(a>b)
+            {
+                System.out.printf("%.6f %.6f %.6f", b,a,c);
+            }
+            else
+            {
+                System.out.printf("%.6f %.6f %.6f", a,b,c);
+            }
+        }
+
+        System.out.printf("\n");
+
+        if((b<a)&(c<a))
+        {
+            if(b>c)
+            {
+                System.out.printf("%.6f %.6f %.6f", a,b,c);
+            }
+            else
+            {
+                System.out.printf("%.6f %.6f %.6f",a,c,b);
+            }
+        }
+        if((a<b)&(c<b))
+        {
+            if(a>c)
+            {
+                System.out.printf("%.6f %.6f %.6f",b,a,c);
+            }
+            else
+            {
+                System.out.printf("%.6f %.6f %.6f",b,c,a);
+            }
+        }
+        if((a<c)&(b<c))
+        {
+            if(a>b)
+            {
+                System.out.printf("%.6f %.6f %.6f",c,a,b);
+            }
+            else
+            {
+                System.out.printf("%.6f %.6f %.6f",c,b,a);
+            }
+        }
+
+    }
+}
+-------------------------------------------------------------
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)throws IOException {
+        try
+        {
+            Scanner scan = new Scanner(System.in);
+            int n = scan.nextInt();
+            int m = scan.nextInt();
+            int tab1[] = new int[n];
+            int tab2[] = new int[m];
+
+            for(int i=0; i<n; i++)
+            {
+                tab1[i] = scan.nextInt();
+            }
+            for(int i=0; i<m; i++)
+            {
+                tab2[i] = scan.nextInt();
+            }
+            int rozmiar = m;
+            if(n<m)
+            {
+                rozmiar = n;
+            }
+            else if(m<n)
+            {
+                rozmiar = m;
+            }
+            int wynik = 0;
+            for(int i=0; i<rozmiar; i++)
+            {
+                wynik+=tab1[i]*tab2[i];
+            }
+            System.out.print(wynik);
+        }
+        catch(Exception e)
+        {
+            System.out.println("BŁĄD");
+        }
+    }
+}
+-------------------------------------------------------------
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)throws IOException {
+        int x;
+        Scanner scan = new Scanner(System.in);
+        do
+        {
+            x = scan.nextInt();
+        }
+        while(x<0);
+        for(int i=0; i<x; i++)
+        {
+            for(int j=0; j<= i; j++)
+            {
+                System.out.printf("*");
+            }
+            System.out.print("\n");
+        }
+        for(int i=0; i<x; i++)
+        {
+            for(int j=0; j<x-i; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+        for( int i=0; i<x; i++)
+        {
+            for(int j=0; j<x; j++)
+            {
+                if(j<i)
+                {
+                    System.out.print(" ");
+                }
+                else
+                {
+                    System.out.print("*");
+                }
+            }
+            System.out.print("\n");
+        }
+        for(int i=0; i<x; i++)
+        {
+            for(int j=i; j<x-1; j++)
+            {
+                System.out.print(" ");
+            }
+            for(int j=0; j<=i; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+    }
+}
+-------------------------------------------------------------
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) throws IOException
+    {
+
+        Scanner scan = new Scanner(System.in);
+        String zdanie = scan.nextLine();
+        System.out.println(czyJestPalindromem(zdanie));
+
+    }
+    static String czyJestPalindromem(String text)
+    {
+        //Pętla porównuje leżące naprzecw siebie elementy
+        for(int i=0; i< text.length()/2; i++)   //Sprawdzamy pętlą każdą literę
+        {
+            //Jeśli jedna litera się nie zgadza to nie musimy sprawdzać dalej
+            if(text.charAt(i) != text.charAt(text.length()-1-i))
+            {
+                return "NIE";
+            }
+        }
+        return "TAK";
+    }
+}
+-------------------------------------------------------------
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        try {
+            Scanner scan = new Scanner(System.in);
+            int x = scan.nextInt();
+            int y = scan.nextInt();
+            if (x < 0 || y < 0) {
+                System.out.println("BŁĄD");
+                return;
+            }
+            int[][] macierz = new int[x][y];
+
+            for (int i = 0; i < x; i++) {
+                for (int j = 0; j < y; j++) {
+                    macierz[i][j] = scan.nextInt();
+                }
+            }
+
+            int[][] macierzTranspozycja = new int[y][x];
+
+            for (int i = 0; i < x; i++) {
+                for (int j = 0; j < y; j++) {
+                    macierzTranspozycja[j][i] = macierz[i][j];
+                }
+            }
+            for (int i = 0; i < y; i++) {
+                for (int j = 0; j < x; j++) {
+                    System.out.print(macierzTranspozycja[i][j]);
+                    if (j != x - 1) {
+                        System.out.print(" ");
+                    }
+                }
+                System.out.println();
+            }
+        } catch (Exception e) {
+            System.out.println("BŁĄD");
+        }
+
+    }
+}
+-------------------------------------------------------------
+import java.io.IOException;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        String text;
+        Scanner scan = new Scanner(System.in);
+        text = scan.nextLine();
+        System.out.println(czyJestPangramem(text.toLowerCase()));
+
+
+
+    }
+    static boolean czyJestPangramem(String text)
+    {
+        if(text.length()<26)//Z racji że alfabet ma 26 liter to musimy sprawdzić czy zdanie nie jest mniejsze
+        {
+            return false;
+        }
+        else
+        {
+            for(char znak='a'; znak <='z'; znak++)
+                if(text.indexOf(znak)<0)
+                {
+                    return false;
+                }
+        }
+        return true;
+    }
+
+}
+-------------------------------------------------------------
+import java.io.IOException;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+
+        double a, result, sec;
+        String nazwaPlanety;
+
+        Scanner scan = new Scanner(System.in);
+        sec = scan.nextDouble();
+        nazwaPlanety = scan.next();
+
+        if(nazwaPlanety.equals("Ziemia"))
+        {
+            result = sec/31557600;
+            System.out.printf("%.2f", result);
+        }
+        if(nazwaPlanety.equals("Merkury"))
+        {
+            a = (365.25 * 0.2408467)*24*60*60;
+            result = sec/a;
+            System.out.printf("%.2f", result);
+        }
+        if(nazwaPlanety.equals("Wenus"))
+        {
+            a = (365.25 *  0.61519726)*24*60*60;
+            result = sec/a;
+            System.out.printf("%.2f", result);
+        }
+        if(nazwaPlanety.equals("Mars"))
+        {
+            a = (365.25 *  1.8808158)*24*60*60;
+            result = sec/a;
+            System.out.printf("%.2f", result);
+        }
+        if(nazwaPlanety.equals("Jowisz"))
+        {
+            a = (365.25 *  11.862615)*24*60*60;
+            result = sec/a;
+            System.out.printf("%.2f", result);
+        }
+        if(nazwaPlanety.equals("Saturn"))
+        {
+            a = (365.25 *  29.447498)*24*60*60;
+            result = sec/a;
+            System.out.printf("%.2f", result);
+        }
+        if(nazwaPlanety.equals("Uran"))
+        {
+            a = (365.25 *  84.016846)*24*60*60;
+            result = sec/a;
+            System.out.printf("%.2f", result);
+        }
+        if(nazwaPlanety.equals("Neptun"))
+        {
+            a = (365.25 *  164.79132)*24*60*60;
+            result = sec/a;
+            System.out.printf("%.2f", result);
+        }
+
+    }
+}
+-------------------------------------------------------------
+import java.io.*;
+import java.util.*;
+
+class biggestElementList {
+    public static void main(String[] args) throws IOException 
+    {
+        List<Integer> lista = new ArrayList<Integer>();
+        try{
+            Scanner scan = new Scanner(System.in);
+            while(scan.hasNext()){
+                lista.add(scan.nextInt());
+            }
+            System.out.println(max_rec(lista));
+        }
+        catch(Exception e){
+            System.out.println("BŁĄD");
+        }
+    }
+    public static int max_rec(List<Integer> listaFunkcji){
+        int najwiekszaWartosc, kolejna;
+        if(listaFunkcji.size() == 1){
+            najwiekszaWartosc = listaFunkcji.get(0);
+        }
+        else{
+            najwiekszaWartosc = listaFunkcji.get(0);
+            listaFunkcji.remove(0);
+            kolejna = max_rec(listaFunkcji);
+            if(kolejna > najwiekszaWartosc){
+                najwiekszaWartosc = kolejna;
+            }
+        }
+        return najwiekszaWartosc;
+    }
+}
