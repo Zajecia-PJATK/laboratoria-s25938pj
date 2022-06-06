@@ -1,6 +1,5 @@
 import java.util.*;
 
-
 class Hamster {
     String name;
     private int hamsterNumber;
