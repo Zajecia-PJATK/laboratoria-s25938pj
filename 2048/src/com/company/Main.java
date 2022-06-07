@@ -14,6 +14,7 @@ public class Main extends Canvas implements Runnable {
 
     public JFrame ramka;
     public Thread watek;
+    public Klawiatura klawisz;
     public Gra gra;
     public boolean uruchomionaGra = false;
 
@@ -25,6 +26,8 @@ public class Main extends Canvas implements Runnable {
         setPreferredSize(new Dimension((int) (SZEROKOSC * skala), (int) (WYSOKOSC * skala)));
         ramka = new JFrame();
         gra = new Gra();
+        klawisz = new Klawiatura();
+        addKeyListener(klawisz);
     }
 
     public void start() {
@@ -65,7 +68,7 @@ public class Main extends Canvas implements Runnable {
             renderuj();
             ramki++;
             if (System.currentTimeMillis() - stoper > 1000) {
-                ramka.setTitle("2048 PJATK" + aktualizacje + "aktualizacje, " + ramki + "ramki");
+                ramka.setTitle("2048 cd ../PJATK" + aktualizacje + "aktualizacje, " + ramki + "ramki");
                 aktualizacje = 0;
                 ramki = 0;
             }
@@ -74,6 +77,7 @@ public class Main extends Canvas implements Runnable {
 
     public void aktualizuj() {
         gra.aktualizuj();
+        klawisz.aktualizuj();
     }
 
     public void renderuj() {
