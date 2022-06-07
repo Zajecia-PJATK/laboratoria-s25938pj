@@ -23,7 +23,11 @@ public class Gra {
 
     }
     public void renderuj(){
-
+        Renderowanie.renderujTlo();
+        Renderowanie.renderujKafelek(new Kafelek(100,100,0xffffff00),100,100 );
+        for(int i=0; i< Main.pixele.length; i++){
+            Main.pixele[i] = Renderowanie.pixele[i];
+        }
     }
     public void renderujText(Graphics2D gra){
 
